@@ -1,0 +1,32 @@
+/* Tic Tac Toe board container */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* Three columns of equal width */
+    grid-template-rows: repeat(3, 100px); /* Three rows of equal height */
+    gap: 5px; /* Spacing between cells */
+    margin: 20px auto; /* Center the board horizontally */
+    width: 310px; /* Set a fixed width for the board */
+}
+
+/* Tic Tac Toe cell style */
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc; /* Border around each cell */
+    font-size: 24px; /* Font size for the cell content (X, O) */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Styling for the winning combination cells */
+.cell.winner {
+    background-color: #f0f0f0; /* Light gray background for winning cells */
+}
+
+/* Styling for the draw message */
+.draw {
+    margin-top: 20px; /* Add some space between the board and the draw message */
+    font-weight: bold; /* Make the message bold */
+    text-align: center; /* Center the message horizontally */
+}
