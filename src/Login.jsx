@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
+import backg from './assets/download.png';
+
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -22,6 +24,8 @@ function Login() {
 
     return (
         <div className="login-container">
+            <h1>   LETS PLAY FIC FAC FOE!!! </h1>
+            <img className= "image1"src ={backg} alt="another picture"></img>
             <form className="login-form" onSubmit={handleSubmit}>
                 <input
                     type="text"
