@@ -1,32 +1,57 @@
-/* Tic Tac Toe board container */
-.board {
-    display: grid;
-    grid-template-columns: repeat(3, 100px); /* Three columns of equal width */
-    grid-template-rows: repeat(3, 100px); /* Three rows of equal height */
-    gap: 5px; /* Spacing between cells */
-    margin: 20px auto; /* Center the board horizontally */
-    width: 310px; /* Set a fixed width for the board */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
-/* Tic Tac Toe cell style */
+.color-selection {
+    margin-bottom: 20px;
+}
+
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
 .cell {
+    width: 100px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #ccc; /* Border around each cell */
-    font-size: 24px; /* Font size for the cell content (X, O) */
-    cursor: pointer; /* Show pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    background-color: #eee;
+    border: 1px solid #333;
+    cursor: pointer;
 }
 
-/* Styling for the winning combination cells */
-.cell.winner {
-    background-color: #f0f0f0; /* Light gray background for winning cells */
+.cell.hover {
+    background-color: #ddd;
 }
 
-/* Styling for the draw message */
-.draw {
-    margin-top: 20px; /* Add some space between the board and the draw message */
-    font-weight: bold; /* Make the message bold */
-    text-align: center; /* Center the message horizontally */
+.pawn {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: move;
+}
+
+.pawn.purple { background-color: purple; }
+.pawn.cyan { background-color: cyan; }
+.pawn.yellow { background-color: yellow; }
+.pawn.red { background-color: red; }
+.pawn.green { background-color: green; }
+.pawn.orange { background-color: orange; }
+.pawn.pink { background-color: pink; }
+
+.winner, .draw {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
 }
